@@ -1,0 +1,13 @@
+a{
+     text-decoration: none;
+}
+.one{
+    color: whitesmoke;
+    background-color: rgba(143, 141, 142, 0.5);
+    text-align: left;
+}
+.two{
+    color: ghostwhite;
+    background-color: orange;
+}
+
