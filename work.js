@@ -6,9 +6,10 @@ function changeText(){
 document.getElementById('one').innerHTML="Bye Bye";
 }
 
-function Keycode(){
+function showKeycode(){
 	alert('warnning')
 }
+document.onkeydown= showKeycode;
 
 function change(){
 	var select=document.getElementById('three');
