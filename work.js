@@ -7,9 +7,10 @@ document.getElementById('one').innerHTML="Bye Bye";
 }
 
 function showKeycode(){
-	alert('warnning')
+	alert('warnning');
+	document.onkeydown= showKeycode;
 }
-document.onkeydown= showKeycode;
+
 
 function change(){
 	var select=document.getElementById('three');
