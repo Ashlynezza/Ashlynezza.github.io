@@ -1,5 +1,4 @@
 alert(Date());
-
 function over(){
 	document.getElementById('two').src='https://p3-tt.byteimg.com/origin/pgc-image/4c84296e66a84b6da958cd9133dcecd9';
 }
@@ -8,7 +7,7 @@ document.getElementById('one').innerHTML="Bye Bye";
 }
 
 function Keycode(){
-	alert()
+	alert('warnning')
 }
 
 function change(){
@@ -19,15 +18,15 @@ function change(){
 }
 function temp(f){
 	var f=20;
-	alert((f-32)/1.8);
+	alert((f-32)/(9/5));
 }
 function cal(){
 	var a = parseFloat(prompt('the frist number'));
 	var b = parseFloat(prompt('the second number'));
-	console.log(a+b);
+	alert('parseFloat(a+b)');
 }
 function sum(){
-	var c = prompt('What is your First Name')
-	var d= prompt('What is your second Name')
-	alert("Nice to meet you"+c+d)
+	var c = prompt('What is your First Name');
+	var d= prompt('What is your second Name');
+	alert("Nice to meet you"+c+d);
 }
