@@ -7,7 +7,6 @@ document.getElementById('one').innerHTML="Bye Bye";
 }
 
 function showKeycode(){
-	document.onkeydown= showKeycode;
 	alert('warnning');
 }
 
@@ -30,5 +29,5 @@ function cal(){
 function sum(){
 	var c = prompt('What is your First Name');
 	var d= prompt('What is your second Name');
-	console.log(c+d);
+	alert('Hi'+(c+d));
 }
