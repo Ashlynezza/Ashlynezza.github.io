@@ -23,7 +23,7 @@ function temp(f){
 function cal(){
 	var a = parseFloat(prompt('the frist number'));
 	var b = parseFloat(prompt('the second number'));
-	alert('parseFloat(a+b)');
+	alert('the answer is'+parseFloat(a+b));
 }
 function sum(){
 	var c = prompt('What is your First Name');
