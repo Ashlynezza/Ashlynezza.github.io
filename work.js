@@ -30,5 +30,5 @@ function cal(){
 function sum(){
 	var c = prompt('What is your First Name');
 	var d= prompt('What is your second Name');
-	alert("Nice to meet you"+c+d);
+	console.log(c+d);
 }
