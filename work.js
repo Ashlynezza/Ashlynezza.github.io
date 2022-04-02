@@ -7,8 +7,8 @@ document.getElementById('one').innerHTML="Bye Bye";
 }
 
 function showKeycode(){
-	alert('warnning');
 	document.onkeydown= showKeycode;
+	alert('warnning');
 }
 
 
