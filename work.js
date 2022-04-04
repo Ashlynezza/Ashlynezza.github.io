@@ -18,9 +18,9 @@ function change(){
 	select.style.textAlign='center';
 }
 function temp(f){
-	var f=20;
-	alert((f-32)/(9/5));
+	console.log((f-32)/(9/5));
 }
+
 function cal(){
 	var a = parseFloat(prompt('the frist number'));
 	var b = parseFloat(prompt('the second number'));
