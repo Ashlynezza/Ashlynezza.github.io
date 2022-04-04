@@ -20,8 +20,8 @@ function change(){
 
 function temp(f){
     var f=temp(20);
-    console.log((f-32)*(5/9));
-    document.getElementById('degree').innerHTML=temp;}
+    alert((f-32)*(5/9));
+   }
 
 
 function cal(){
