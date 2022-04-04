@@ -19,8 +19,9 @@ function change(){
 }
 function temp(f){
     return (f-32)*(5/9);}
+function temp(){
     var degree=temp(20);
-    document.getElementById('degree').innerHTML=temp;
+    document.getElementById('degree').innerHTML=temp;}
 
 
 function cal(){
