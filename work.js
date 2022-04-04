@@ -18,11 +18,9 @@ function change(){
 	select.style.textAlign='center';
 }
 
-function temp(f){
-	var f=20;
-	alert((f-32)/(9/5));
+function temp(){
+	document.getElementById('five').innerHTML=(20-32)/1.8;
 }
-
 
 
 function cal(){
