@@ -18,8 +18,8 @@ function change(){
 	select.style.textAlign='center';
 }
 function temp(f){
-    var c = ((f-32)*5/9);
-    document.getElementById('degree').innerHTML=c;
+    console.log((f-32)*5/9);
+    document.getElementById('degree').innerHTML=log;
 }
 
 function cal(){
