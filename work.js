@@ -17,10 +17,10 @@ function change(){
 	select.style.fontFamily='Arial';
 	select.style.textAlign='center';
 }
+
 function temp(f){
-    return (f-32)*(5/9);}
-function temp(){
-    var degree=temp(20);
+    var f=temp(20);
+    console.log(f-32)*(5/9);
     document.getElementById('degree').innerHTML=temp;}
 
 
