@@ -18,7 +18,7 @@ function change(){
 	select.style.textAlign='center';
 }
 function temp(f){
-    var c = ((f-32)/(9/5));
+    var c = f*9/5+32;
     document.getElementById('degree').innerHTML=c;
 }
 
