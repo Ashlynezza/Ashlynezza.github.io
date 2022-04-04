@@ -18,10 +18,10 @@ function change(){
 	select.style.textAlign='center';
 }
 function temp(f){
-    return (f-32)*(5/9);
+    return (f-32)*(5/9);}
     var degree=temp(20);
     document.getElementById('degree').innerHTML=temp;
-}
+
 
 function cal(){
 	var a = parseFloat(prompt('the frist number'));
