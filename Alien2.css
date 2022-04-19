@@ -2,6 +2,18 @@ p{
 	background-color: rgba(143, 141, 142, 0.2);
 	margin-top:-5px;
 	margin-bottom:-5px;
+	color: white; 
+	text-align: center; 
+	font-size: 70px; 
+	font-family: times new roman; 
+	text-shadow: 5px 3px 3px grey;
+}
+body{
+	background-image:url(1.jpg) ;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 h1{
 	margin-left: 40px;
