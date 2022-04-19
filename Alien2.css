@@ -1,58 +1,18 @@
-p{
-	background-color: rgba(143, 141, 142, 0.2);
-	margin-top:-5px;
-	margin-bottom:-5px;
-	color: white; 
-	text-align: center; 
-	font-size: 70px; 
-	font-family: times new roman; 
-	text-shadow: 5px 3px 3px grey;
-}
-body{
-	background-image:url(1.jpg) ;
-	background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 100%;
+#myvideo{
+  margin-top:-11px;
+  margin-left:-10px;
+  width:1443px;
+  height:300px;
+  object-fit:cover;
 }
 h1{
-	margin-left: 40px;
-	font-size:40px;
-	font-family:ayuthaya;
-	word-spacing: 60px;
+  margin-left:40px;
 }
 .column{
-	float:left;
-	width:50%;
-	text-align:center;
+  float:left;
+  width:33%;
+  text-align:left;
 }
-.text-block {
-  position: absolute;
-  bottom: 140px;
-  right: 315px;
-  background-color:rgba(108,155,255,0.7);
-  color: rgba(255,255,255,0.8);
-  padding-left: 20px;
-  padding-right: 20px;
-  }
-.text-block:hover{
-  background-color:rgb(97,138,255);
-  color:white;
-}
-.text-blocka {
-  position: absolute;
-  bottom: -240px;
-  right: 325px;
-  background-color: rgba(0,0,0,0.7);
-  color: rgba(255,255,255,0.8);
-  padding-left: 20px;
-  padding-right: 20px;
-  }
-.text-blocka:hover{
-  background-color:black;
-  color:white;
-}
-a{
-	text-decoration:none;
-	color: rgba(255,255,255,0.8)
+p{
+  margin-left:40px;
 }
