@@ -1,0 +1,14 @@
+p{
+	background-color: rgba(143, 141, 142, 0.2);
+}
+h1{
+	margin-left: 90px;
+	font-size:40px;
+	font-family:ayuthaya;
+	word-spacing: 60px;
+}
+.column{
+	float:left;
+	width:50%;
+	text-align:center;
+}
