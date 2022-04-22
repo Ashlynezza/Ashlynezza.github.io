@@ -2,37 +2,32 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Groupwork</title>
- <link rel="stylesheet" href="Alien6.css">
+  <title>CodePen - Simple register form</title>
+  <link rel='stylesheet'href='Alien6.css'>
+  <script src="Alien6.js"></script><link rel="stylesheet" href="Alien6.css">
 
 </head>
 <body>
-<div ng-app="coolform" class="wrapper">
-  <div cool-form>
-    <div class="q-title">Join the club!</div>
-    <div ng-repeat="q in questions" class="question">
-      <label>
-        <span class="q-text">
-          {{q.question}}
-          <span class="q-answer">
-            {{q.answer}}
-          </span>
-        </span>
-        <input type="text" id="q{{$index}}" ng-model="q.answer">
-        <span class="q-back" ng-click="open($index)"><</span>
-      </label>
-      <span class="q-next" ng-click="open($index+1)">></span>  
+   <video autoplay muted loop id="myVideo">
+  <source src="2.mp4" type="video/mp4">
+</video>
+
+<div id="progress"></div>
+
+<div class="center">
+  <div id="register">
+
+    <i id="progressButton" class="ion-android-arrow-forward next"></i>
+
+    <div id="inputContainer">
+      <input id="inputField" required autofocus />
+      <label id="inputLabel"></label>
+      <div id="inputProgress"></div>
     </div>
-    <div class="q-after">
-      <hr>
-      <div class="q-confirm-text">Is the above information correct?</div>
-      <div class="q-confirm-button"><a href="Alien7.html">Absolutely</a></div>
-    </div>
-  </div>
-  <center ng-show="activequestion > -1 && activequestion < questions.length">{{activequestion+1}} / {{questions.length}}</center>
-  
+     </div>
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script><script  src="Alien6.js"></script>
+<button id="doge" onclick="nameee()"><a style='text-decoration: none;' id='one' href="index.html">Exit</a></button>
+  <script  src="Alien6.js"></script>
 
 </body>
 </html>

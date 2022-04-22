@@ -1,115 +1,108 @@
-var coolform = angular.module('coolform', []);
-coolform
-  .directive('coolForm', function($timeout) {
-    var ctrl = function($scope, $element, $attributes) {
-      $scope.questions = [];
-      $scope.activequestion = -1;
-      $scope.answering = true;
-      
-      $scope.questions.push({'question': 'What\'s your name?'});
-      $scope.questions.push({'question': 'Why are you interested in extraterrestrial life？'});
-      $scope.questions.push({'question': 'What is the main activity you want to do about Study extraterrestrial intelligence?'});
-      $scope.questions.push({'question': 'And how much do you know about extraterrestrial intelligence?'});
+var questions = [
+  {question:"What's your name?"},
+  {question:"What's your email?"},
+  {question:"How old are you?"},
+  {question:"Are you study or work?"}
+]
 
-      function removeOpen() {
-        for(i=0;i<qs.length;i++){
-          angular.element(qs[i]).removeClass('open');
-        }
-      }
-      
-      var scrolle = document.getElementById('form-wrapper');
-      var qs = document.getElementsByClassName('question');
-      
-      $scope.open = function(order) {
-        removeOpen();
-        if (order >= $scope.questions.length || order < 0) {
-          $scope.answering = false;
-          if ($element.hasClass('answering')) {
-            $element.removeClass('answering');
-            $scope.activequestion = $scope.questions.length+1;
-          }
-        } else {
-          $scope.answering = true;
-          if (!$element.hasClass('answering')) {
-            $element.addClass('answering');
-          }
-          //document.activeElement.blur();
-          $scope.activequestion = order;
-          var offset = qs[0].offsetTop;
-          if(order !== 0) {offset = qs[order-1].offsetTop;}
-          scrollToAndFocus(scrolle, offset, 500, order);
-          if (!angular.element(qs[order]).hasClass('open')) {
-            angular.element(qs[order]).addClass('open');
-          }
-        }
 
-      }
-      
-      function scrollToAndFocus(element, to, duration, focus) {
-          if (duration <= 10) {
-            document.getElementById('q'+(focus)).focus();
-            return;
-          }
-          var difference = to - element.scrollTop;
-          var perTick = difference / duration * 10;
-          window.setTimeout(function() {
-              element.scrollTop = element.scrollTop + perTick;
-              if (element.scrollTop === to) return;
-              scrollToAndFocus(element, to, duration - 10, focus);
-          }, 10);
-      }
-      
-      
-      var handler = function(e){
-        if(e.keyCode === 37) {
-          //left arrow
-          e.preventDefault(); 
-          $scope.$apply(function() {
-            $scope.open($scope.activequestion-1);
-          });
-        }     
-        if(e.keyCode === 39) {
-          //right arrow
-          e.preventDefault(); 
-          $scope.$apply(function() {
-            $scope.open($scope.activequestion+1);
-          });
-        }
-        if(e.keyCode === 13) {
-          //enter
-          e.preventDefault(); 
-          $scope.$apply(function() {
-            $scope.open($scope.activequestion+1);
-          });
-        }
-        if (e.keyCode == 9) {
-          //tab
-          e.preventDefault(); 
-          $scope.$apply(function() { $scope.open($scope.activequestion+1);
-          });
-        } 
-      };
+;(function(){
 
-      
-      $element.on('keydown', handler);
-      $scope.$on('$destroy',function(){
-        $element.off('keydown', handler);
-      });
-      
-      
-      setTimeout(function() {
-        $scope.activequestion++;
-        $scope.$apply(function(){
-          $scope.open($scope.activequestion);
-        });
-      }, 2000);
-    };
-    return {
-      restrict: 'EA',
-      replace: true,
-      transclude: true,
-      link: ctrl,
-      template: '<div ng-transclude id="form-wrapper" class="answering"></div>'
-    };
+  var tTime = 100  
+  var wTime = 200  
+  var eTime = 1000 
 
-  });
+
+  var position = 0
+
+  putQuestion()
+
+  progressButton.addEventListener('click', validate)
+  inputField.addEventListener('keyup', function(e){
+    transform(0, 0) // ie hack to redraw
+    if(e.keyCode == 13) validate()
+  })
+
+
+  function putQuestion() {
+    inputLabel.innerHTML = questions[position].question
+    inputField.value = ''
+    inputField.type = questions[position].type || 'text'  
+    inputField.focus()
+    showCurrent()
+  }
+  
+  // when all the questions have been answered
+  function done() {
+    
+    // remove the box if there is no next question
+    register.className = 'close'
+    
+    // add the h1 at the end with the welcome text
+    var h1 = document.createElement('h1')
+    h1.appendChild(document.createTextNode('Welcome join our team' + questions[0].value + '!'))
+    setTimeout(function() {
+      register.parentElement.appendChild(h1)     
+      setTimeout(function() {h1.style.opacity = 1}, 50)
+    }, eTime)
+    
+  }
+
+  // when submitting the current question
+  function validate() {
+
+    // set the value of the field into the array
+    questions[position].value = inputField.value
+
+    // check if the pattern matches
+    if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
+    else ok(function() {
+      
+      // set the progress of the background
+      progress.style.width = ++position * 100 / questions.length + 'vw'
+
+      // if there is a new question, hide current and load next
+      if (questions[position]) hideCurrent(putQuestion)
+      else hideCurrent(done)
+             
+    })
+
+  }
+
+  // helper
+  // --------------
+
+  function hideCurrent(callback) {
+    inputContainer.style.opacity = 0
+    inputProgress.style.transition = 'none'
+    inputProgress.style.width = 0
+    setTimeout(callback, wTime)
+  }
+
+  function showCurrent(callback) {
+    inputContainer.style.opacity = 1
+    inputProgress.style.transition = ''
+    inputProgress.style.width = '100%'
+    setTimeout(callback, wTime)
+  }
+
+  function transform(x, y) {
+    register.style.transform = 'translate(' + x + 'px ,  ' + y + 'px)'
+  }
+
+  function ok(callback) {
+    register.className = ''
+    setTimeout(transform, tTime * 0, 0, 10)
+    setTimeout(transform, tTime * 1, 0, 0)
+    setTimeout(callback,  tTime * 2)
+  }
+
+  function wrong(callback) {
+    register.className = 'wrong'
+    for(var i = 0; i < 6; i++) // shaking motion
+      setTimeout(transform, tTime * i, (i%2*2-1)*20, 0)
+    setTimeout(transform, tTime * 6, 0, 0)
+    setTimeout(callback,  tTime * 7)
+  }
+
+}())
