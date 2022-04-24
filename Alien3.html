@@ -5,26 +5,471 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Groupwork</title>
+
+	<script src="Alien.js"></script>
+
+	<style type="text/css">
+		
+	body{
+	background-image:url(https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_1280.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 115%;
+	}
+
+	#one{
+		font-size: 40px;
+	    background-color: rgba(0,0,0,0.7);
+	    color: white;
+	    margin-left: 0px;
+	    font-family:avenir next condensed;
+	}
+
+	p{
+		color: whitesmoke;
+	}
+
+	.column{
+	    float: left;
+	    width: 50%;
+	    text-align: left;
+	}
+
+	#cheems{
+	  position: fixed;
+	  bottom: 0;
+	  right: 0;
+	  color: #000000; 
+	  background: transparent; 
+	  border: 2px solid #000000;
+	  border-radius: 6px; 
+	  border: none;
+	  color: white;
+	  padding: 16px 32px;
+	  text-align: center;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  transition-duration: 0.4s; 
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  border-top-left-radius: 26px;
+	  border-bottom-left-radius: 26px;
+	  border-top-right-radius: 26px;
+	  border-bottom-right-radius: 26px;
+	}
+
+	#cheems {
+	      background-color: white; 
+	      color: black; 
+	      border: 2px solid #000000;
+	}
+
+	#cheems:hover {
+	      background-color: grey;
+	      color: white;
+	}
+
+	.A{    
+	  margin: auto;
+	  width: 820px;
+	  height: 160px; 
+	  top: 0px;
+	  left: 0px;
+	  right: 0px;
+	  bottom: 0px;
+	  display: block;
+	}
+
+	#B{
+	  border-style: solid;
+	  border-width: 2px;
+	  border-color: #000000;
+	    color: grey;
+	    font-family: Comic Sans MS;
+	    text-shadow: 1.5px 1.5px 1px #454444;
+	    font-size: 31px;
+	    text-decoration: none;
+	    margin: auto;
+	}
+
+	a:hover, a:active {
+	  color: lightgrey;
+	}
+
+	a.nav:link{
+	  background-color: #262525;
+	  color: #121111;
+	  display: inline;
+	  padding: 50px;
+	  text-align:center;
+	  width: 1200px;
+	  font-family: Comic Sans MS;
+	  font-size: 31px;
+	  text-decoration: none;
+	  margin: auto
+	}
+
+	a.nav:hover{
+	  color: #B6BC9F;
+	  background-color:#121111;
+	}
+
+	li.nav{
+	  float: left;
+	  list-style-type: none;
+	}
+
+	ul.nav{
+	  display: center;
+	  margin:auto;
+	  font-family: Comic Sans MS;
+	}
+
+	ul.nav li:first-child a {
+	  border-top-left-radius: 26px;
+	  border-bottom-left-radius: 26px;
+	}
+
+	ul.nav li:last-child a {
+	  border-top-right-radius: 26px;
+	  border-bottom-right-radius: 26px;
+	}
+
+	#btn {
+		background: #000000;
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		color: darkgrey;
+		background-size: cover;
+		background-position: center;
+		display: inline-block;
+		border: none;
+		width: 180px;
+		border-radius: 900px;
+		height: 50px;
+		transition: all 0.5s;
+		cursor: pointer;
+  }
+
+	#btn:hover
+	{
+		width: 187px;
+		height: 57px;
+	}
+
+	#btnn {
+		background: #000000;
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		color: darkgrey;
+		background-size: cover;
+		background-position: center;
+		display: inline-block;
+		border: none;
+		width: 150px;
+		border-radius: 900px;
+		height: 50px;
+		transition: all 0.5s;
+		cursor: pointer;
+  }
+
+	#btnn:hover
+	{
+		width: 157px;
+		height: 57px;
+	}
+
+	#btnnn {
+		background: #000000;
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		color: darkgrey;
+		background-size: cover;
+		background-position: center;
+		display: inline-block;
+		border: none;
+		width: 250px;
+		border-radius: 900px;
+		height: 50px;
+		transition: all 0.5s;
+		cursor: pointer;
+  }
+
+	#btnnn:hover
+	{
+		width: 257px;
+		height: 57px;
+	}
+
+	#opps{
+  font-family: Comic Sans MS;
+  color: whitesmoke;
+}
+
+	</style>
 </head>
+
 <body>
-	<h1 id='one'>List of alleged extraterrestrial beings</h1>
-	<div>
-		<div class="column">
-			<img width='300px'height='400px'src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flatwoods_monster.png/440px-Flatwoods_monster.png"><p>Flatwoods monster</p>
-      <img width='300px'height='500px'src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Greylien.png/300px-Greylien.png"><p>Grey alien</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hopkinsville_goblin.png/440px-Hopkinsville_goblin.png"><p>Kelly-Hopkinsville encounter</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Fantastic_Novels_cover_January_1951.jpg"><p>little green men</p>
-      <img src="https://images-na.ssl-images-amazon.com/images/I/519phIvjxtL._SX331_BO1,204,203,200_.jpg"><p>Nordic aliens</p>
-      <img src="https://www.heraldscotland.com/resources/images/10711426.jpg?type=article-full"><p>Reptilians and Reptiloids</p>
-		</div>
-		<div class="column">
-			<p>The Flatwoods monster,in West Virginia folklore, is an entity reported to have been sighted in the town of Flatwoods in Braxton County, West Virginia, United States, on September 12, 1952, after a bright object crossed the night sky. Over 50 years later, investigators concluded that the light was a meteor and the creature was a barn owl perched in a tree, with shadows making it appear to be a large humanoid.</p>
-			<p>Grey-skinned humanoids, usually 3–4 feet tall, hairless, with large heads, black almond-shaped eyes, nostrils without a nose, slits for mouths, no ears and 3-4 fingers including thumb. Greys have been the predominant extraterrestrial beings of alleged alien contact since the 1960s.</p>
-      <p>Small, greenish-silver humanoids.he Kelly–Hopkinsville encounter was a claimed close encounter with extraterrestrial beings in 1955 near Kelly and Hopkinsville in Christian County, Kentucky, United States.</p>
-      <p>Diminutive green humanoids. Even though a few abductions have referred to green skin, no report has ever involved anything that would fit the classic cultural stereotype of "Little Green Men". They are included here only for cultural reference.</p>
-      <p>Humanoids with stereotypical "Nordic features" (tall, blonde hair, blue eyes) and have featured in several cases of contact. It is said they are from Ancient Earth but presenting themselves as ETs in the past, they moved from living on the surface to live underground around the Himalayas area after a natural event</p>
-      <p>Tall, scaly humanoids. Reptilian humanoid beings date back at least as far as Ancient Egypt, with the crocodile-headed river god Sobek. The Reptilian conspiracy theory has been advocated by David Icke.</p>
-		</div>
-	</div>
+	
+<br>
+<br>
+<hr>
+
+<input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
+
+<center><h1 style='font-size: 50px; font-weight: bolder; font-family: Comic Sans MS; color: whitesmoke;'>Extraterrestrial Intelligence</h1></center>
+
+<hr>
+<br>
+<br>
+<br>
+<br>
+
+<div class="A">
+	<ul class="nav"><center>
+        <li class="nav"><a id="B" class="nav" href="index.html"><b>Home</b></a></li>
+        <li class="nav"><a id="B" class="nav" href="Alien3.html"><b>About</b></a></li>
+        <li class="nav"><a id="B" class="nav" href="Alien2.html"><b>News</b></a></li>
+        <li class="nav"><a id="B" class="nav" href="Alien5.html"><b>Recruit</b></a></li>
+	</ul></center>
+</div>
+
+<table>
+	
+  <tr>
+  	<th colspan="3"><center><h1 id='one'>List of alleged extraterrestrial beings</h1></center></th>
+  </tr>
+
+  <tr>
+    <th><img width='380px'height='500px'src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flatwoods_monster.png/440px-Flatwoods_monster.png"></th>
+
+    <td rowspan="2" colspan="2"><p>
+    &ensp;&ensp;&ensp;&ensp;The Flatwoods monster (also known as the Braxton County monster, Braxie, or the Phantom of Flatwoods), in West Virginia folklore, is an entity reported to have been sighted in the town of Flatwoods in Braxton County, West Virginia, United States, on September 12, 1952, after a bright object crossed the night sky. Over 50 years later, investigators concluded that the light was a meteor and the creature was a barn owl perched in a tree, with shadows making it appear to be a large humanoid.
+
+    <br>
+
+    &ensp;&ensp;&ensp;&ensp;At 7:15 p.m., on September 12, 1952, two brothers, Edward and Fred May, and their friend Tommy Hyer, said that they saw a bright object cross the sky and land on the property of local farmer G. Bailey Fisher. The boys went to the home of Kathleen May, where they told their story. May, accompanied by the three boys, local children Neil Nunley and Ronnie Shaver, and West Virginia National Guardsman Eugene Lemon, went to the Fisher farm in an effort to locate whatever it was that the boys had said they had seen. The group reached the top of a hill, where Nunley said they saw a pulsing red light. Lemon said he aimed a flashlight in that direction and momentarily saw a tall "man-like figure with a round, red face surrounded by a pointed, hood-like shape".
+
+    <br>
+
+		&ensp;&ensp;&ensp;&ensp;Descriptions varied. In an article for Fate Magazine based on his tape-recorded interviews, UFO writer Gray Barker described the figure as approximately 10 feet (3 m) tall, with a round blood-red face, a large pointed "hood-like shape" around the face, eye-like shapes which emitted greenish-orange light, and a dark black or green body. May described the figure as having "small, claw-like hands", clothing-like folds,[4] and "a head that resembled the ace of spades". According to the story, when the figure made a hissing sound and "glided toward the group", Lemon screamed and dropped his flashlight, causing the group to run away.
+
+		<br>
+
+		&ensp;&ensp;&ensp;&ensp;September 14, 1952, news clip from the Charleston Daily Mail
+		The group said they had smelled a "pungent mist" and some later said they were nauseated. The local sheriff and a deputy had been investigating reports of a crashed aircraft in the area. They searched the site of the reported monster but "saw, heard and smelled nothing". According to Barker's account, the next day, A. Lee Stewart Jr. of the Braxton Democrat claimed to have discovered "skid marks" in the field and an "odd, gummy deposit"[4][5] which were subsequently attributed by UFO enthusiast groups as evidence of a "saucer" landing.
+
+		<br>
+
+    </p>
+
+  </td>
+
+  </tr>
+
+  <tr>
+    <th><p>Flatwoods monster</p></th>
+
+  </tr>
+
+  <tr>
+  	<th colspan="3"><br><hr><hr><br></th>
+  </tr>
+
+  <tr>
+  	<th colspan="3">
+  		<center><h1 style="color: whitesmoke;">Description</h1></center>
+  		<p>
+  		&ensp;&ensp;&ensp;&ensp;Grey aliens, also referred to as Zeta Reticulans, Roswell Greys, or Grays, are purported extraterrestrial beings. They are frequent subjects of close encounters and alien abduction claims. The details of such claims vary widely, but typically Greys are described as being human-like with small bodies with smooth, grey-colored skin; enlarged, hairless heads; and large, black eyes. The Barney and Betty Hill abduction claim, which purportedly took place in New Hampshire in 1961, popularized Grey aliens. Precursor figures have been described in science fiction and similar descriptions appeared in early accounts of the 1948 Aztec UFO Hoax and later accounts of the 1947 Roswell UFO incident.
+
+  	<br>
+
+		&ensp;&ensp;&ensp;&ensp;The Grey alien has emerged as an archetypal image of an intelligent nonhuman creature and extraterrestrial life in general, as well as an iconic trope of popular culture in the age of space exploration.
+		</p>
+	</th>
+  </tr>
+
+  <tr>
+
+    <th><img width='380px'height='500px'src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Greylien.png/300px-Greylien.png"></th>
+
+    <td rowspan="2" colspan="2" style="color:whitesmoke;">
+
+    	&ensp;&ensp;&ensp;&ensp;Greys are typically depicted as grey-skinned, diminutive humanoid beings that possess reduced forms of, or completely lack, external human body parts such as noses, ears, or sex organs. Their bodies are usually depicted as being elongated, having a small chest, and lacking in muscular definition and visible skeletal structure. Their legs are depicted as being shorter and jointed differently from humans with limbs proportionally different from a human.
+
+    <br>
+
+		&ensp;&ensp;&ensp;&ensp;Greys are depicted as having unusually large heads in proportion to their bodies with no hair on the body, and no noticeable outer ears or noses, sometimes with small openings or orifices for ears, nostrils, and mouths. In drawings, Greys are almost always shown with very large, opaque, black eyes. They are frequently described as shorter than average adult humans.
+
+	</td>
+
+  </tr>
+
+  <tr>
+
+    <th><p>Grey alien</p></th>
+
+  </tr>
+
+  <tr>
+  	<th colspan="3"><br><hr><hr><br></th>
+  </tr>
+
+  <tr>
+    <th colspan="2"><p>Kelly-Hopkinsville encounter</p></th>
+    <td rowspan="2"><img width='380px'height='500px'src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hopkinsville_goblin.png/440px-Hopkinsville_goblin.png"></td>
+  </tr>
+
+  <tr>
+    <th colspan="2"><p style=" text-align: left; ">
+    	&ensp;&ensp;&ensp;&ensp;The Kelly–Hopkinsville encounter (a.k.a. Hopkinsville Goblins Case, Kelly Green Men Case) was a claimed close encounter with extraterrestrial beings in 1955 near Kelly and Hopkinsville in Christian County, Kentucky, United States. UFOlogists regard it as one of the most significant and well-documented cases in the history of UFO incidents, while skeptics say the reports were due to "the effects of excitement" and misidentification of natural phenomena such as meteors and owls. The United States Air Force classified the alleged incident as a hoax in the Project Blue Book files.
+
+    	<br>
+
+    	&ensp;&ensp;&ensp;&ensp;On the evening of August 21, 1955 (66 years ago), five adults and seven children arrived at the Hopkinsville police station claiming that small alien creatures from a spaceship were attacking their farmhouse, and that they had been holding them off with gunfire "for nearly four hours". Two of the adults, Elmer Sutton and Billy Ray Taylor, claimed they had been shooting at "twelve to fifteen" short, dark figures who repeatedly popped up at the doorway or peered into the windows.
+
+    	<br>
+
+			&ensp;&ensp;&ensp;&ensp;Concerned about a possible gun battle between local citizens, four city police, five state troopers, three deputy sheriffs, and four military police from the nearby US Army Fort Campbell drove to the Sutton farmhouse located near the town of Kelly in Christian County. Their search yielded nothing apart from evidence of gunfire and holes in window and door screens made by firearms.
+
+			<br>
+
+			&ensp;&ensp;&ensp;&ensp;Residents of the farmhouse included Glennie Lankford, her children, Lonnie, Charlton, and Mary, two sons from a previous marriage, Elmer "Lucky" Sutton, John Charley "J.C." Sutton, their respective wives Vera and Alene, Alene's brother O.P. Baker, and Billy Ray Taylor and his wife June. Both the Taylors, "Lucky", and Vera Sutton were reportedly itinerant carnival workers who were visiting the farmhouse. The next day, neighbors told two officers that the families had "packed up and left" after claiming "the creatures had returned about 3:30 in the morning".
+
+			<br>
+
+    </p></th>
+
+  </tr>
+
+  <tr>
+  	<th colspan="3"><br><hr><hr><br></th>
+  </tr>
+
+  <tr>
+    <th>
+
+    <center><input type="button" value="little green men" id="btn"></center><br>
+    <img width='420px'height='500px'src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Fantastic_Novels_cover_January_1951.jpg" id="pic">
+
+    <script th:inline="javascript" type="text/javascript">
+    	
+    var btn = document.getElementById("btn");
+		var pic = document.getElementById("pic");
+
+		var num = 1;
+
+		btn.onclick = function() {
+
+		    if (num === 1) {
+		        pic.src = "a.jpg";
+		        num = 2;
+		    } else {
+		        pic.src = "https://upload.wikimedia.org/wikipedia/commons/4/4e/Fantastic_Novels_cover_January_1951.jpg";
+		        num = 1;
+		    }
+		};
+
+    </script>
+
+    </th>
+
+    <td>
+
+      <center><input type="button" value="Nordic aliens" id="btnn"></center><br>
+    	<img width='420px'height='500px'src="https://images-na.ssl-images-amazon.com/images/I/519phIvjxtL._SX331_BO1,204,203,200_.jpg" id="picc">
+
+    <script th:inline="javascript" type="text/javascript">
+    	
+    var btnn = document.getElementById("btnn");
+		var picc = document.getElementById("picc");
+
+		var numm = 1;
+
+		btnn.onclick = function() {
+
+		    if (numm === 1) {
+		        picc.src = "b.jpg";
+		        numm = 2;
+		    } else {
+		        picc.src = "https://images-na.ssl-images-amazon.com/images/I/519phIvjxtL._SX331_BO1,204,203,200_.jpg";
+		        numm = 1;
+		    }
+		};
+
+    </script>
+
+    </td>
+
+    <td>
+
+
+    	<center><input type="button" value="Reptilians and Reptiloids" id="btnnn"></center><br>
+    	<img width='420px'height='500px'src="https://www.heraldscotland.com/resources/images/10711426.jpg?type=article-full"  id="piccc">
+
+    <script th:inline="javascript" type="text/javascript">
+    	
+		var btnnn = document.getElementById("btnnn");
+		var piccc = document.getElementById("piccc");
+
+		var nummm = 1;
+
+		btnnn.onclick = function() {
+
+		    if (nummm === 1) {
+		        piccc.src = "c.jpg";
+		        nummm = 2;
+		    } else {
+		        piccc.src = "https://www.heraldscotland.com/resources/images/10711426.jpg?type=article-full";
+		        nummm = 1;
+		    }
+		};
+
+    </script>
+
+    </td>
+
+  </tr>
+
+
+  <tr>
+
+    <th><center><p></p></center></th>
+    <td><center><p></p></center></td>
+    <td><center><p></p></center></td>
+
+  </tr>
+
+  <tr>
+  	<th colspan="3"><br><hr><hr></th>
+  </tr>
+
+</table>
+
+<center>
+
+<footer>
+
+<div id="opps">
+
+  <h5>This page was last edited on 21 April 2022, at 05:54.</h5>
+  <h5>© copyright 2022 By Ashlyn/Marco.</h5>
+  <h5>
+   If you have any suggestions or comments, please feel free to contact us:
+   <center><br>2477516374@qq.com / 2839134101@qq.com </center>
+  </h5>
+
+</div>
+
+</footer>
+
+</center>
+
 </body>
 </html>
+
+
