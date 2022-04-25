@@ -40,7 +40,7 @@ var questions = [
     
     // add the h1 at the end with the welcome text
     var h1 = document.createElement('h1')
-    h1.appendChild(document.createTextNode('Welcome join our team' + questions[0].value + '!'))
+    h1.appendChild(document.createTextNode('Welcome join our team'+' ' + questions[0].value +'!'))
     setTimeout(function() {
       register.parentElement.appendChild(h1)     
       setTimeout(function() {h1.style.opacity = 1}, 50)
@@ -69,8 +69,6 @@ var questions = [
 
   }
 
-  // helper
-  // --------------
 
   function hideCurrent(callback) {
     inputContainer.style.opacity = 0
