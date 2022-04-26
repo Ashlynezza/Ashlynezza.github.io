@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport">
+
+	<title>Groupworklmao</title>
+
+	<style type="text/css">
+
+	body{
+			background-image:url(https://th.bing.com/th/id/R.afdc436364cf0430729f2aa8a289546f?rik=eKe%2fb9eS5U5DeQ&pid=ImgRaw&r=0) ;
+
+		    background-position: top left;
+		    background-attachment: scroll;
+        background-size: 100%;
+		}
+    
+    body:not(.custom-background-image):before {
+	    top: 0;
+	}
+
+	body:not(.custom-background-image):before, 
+	body:not(.custom-background-image):after {
+	    background: inherit;
+	    content: "";
+	    display: block;
+	    height: 120px;
+	    position: fixed;
+	    width: 100%;
+	    z-index: 1;
+	}
+
+	*, *:before, *:after {
+	    box-sizing: inherit;
+	}
+
+    #marco .input{
+      width: 300px;
+      height: 36px;
+      border: 1px solid #000000;
+      border-right: none;
+      border-radius: 4px;
+    }
+    
+    button{
+      position: relative;
+      right: 2px;
+      width: 50;
+      height: 35px;
+      font-size: 14px;
+      color: white;
+      background:  #000000;
+      border：0；
+      border-radius: 4px;
+      border-top-left-radius: 4px;
+		  border-bottom-left-radius: 4px;
+		  border-top-right-radius: 4px;
+		  border-bottom-right-radius: 4px;
+    }
+
+    span[data-descr] {
+		  position: relative;
+		  text-decoration: underline;
+		  color: #00F;
+		  cursor: help;
+		  z-index: 0;
+    }
+
+		span[data-descr]:hover::after,
+		span[data-descr]:focus::after {
+		  content: attr(data-descr);
+		  position: absolute;
+		  left: 0;
+		  top: 24px;
+		  min-width: 200px;
+		  border: 1px #aaaaaa solid;
+		  border-radius: 10px;
+		  background-color: black;
+		  padding: 12px;
+		  color: whitesmoke;
+		  font-size: 14px;
+		  z-index: 0;
+		}
+
+		#marco{
+		  bottom: 0;
+		  right: 0;
+		  color: #000000; 
+		  background: transparent; 
+		  border: 2px solid #000000;
+		  border-radius: 6px; 
+		  border: none;
+		  color: white;
+/*		  padding: 16px 32px;*/
+		  text-align: center;
+		  display: inline-block;
+		  font-size: 20px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s; 
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		  text-decoration: none;
+		  text-transform: uppercase;
+		  border-top-left-radius: 26px;
+		  border-bottom-left-radius: 26px;
+		  border-top-right-radius: 26px;
+		  border-bottom-right-radius: 26px;
+		}
+
+		#marco {
+		      background-color: white; 
+		      color: black; 
+		      border: 2px solid #000000;
+		}
+
+		#marco:hover {
+		      background-color: grey;
+		      color: white;
+		}
+
+	  .A{   
+	    position: fixed;
+
+      margin: 40px 360px ;
+		  width:1500px;
+		  height: 200px; 
+		  display: block;
+      z-index: 2;
+		}
+
+		#B{
+	  border-style: solid;
+	  border-width: 2px;
+	  border-color: #000000;
+    color: grey;
+    font-family: Comic Sans MS;
+    text-shadow: 1.5px 1.5px 1px #454444;
+    font-size: 31px;
+    text-decoration: none;
+    margin: auto;
+		}
+
+		a:hover, a:active {
+		  color: lightgrey;
+		}
+
+		a.nav:link{
+		  background-color: #262525;
+		  color: #121111;
+		  display: inline;
+		  padding: 10px;
+		  text-align:center;
+		  width: 1200px;
+		  font-family: Comic Sans MS;
+		  font-size: 31px;
+		  text-decoration: none;
+		  margin: auto;
+		}
+
+		a.nav:hover{
+		  color: #B6BC9F;
+		  background-color:#121111;
+		}
+
+		li.nav{
+		  float: left;
+		  list-style-type: none;
+		}
+
+		ul.nav{
+		  display: center;
+		  margin:auto;
+		  font-family: Comic Sans MS;
+		}
+
+		ul.nav li:first-child a {
+		  border-top-left-radius: 26px;
+		  border-bottom-left-radius: 26px;
+		}
+
+		ul.nav li:last-child a {
+		  border-top-right-radius: 26px;
+		  border-bottom-right-radius: 26px;
+		}
+
+		#cheems{
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  color: #000000; 
+		  background: transparent; 
+		  border: 2px solid #000000;
+		  border-radius: 6px; 
+		  border: none;
+		  color: white;
+		  padding: 16px 32px;
+		  text-align: center;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s; 
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		  text-decoration: none;
+		  text-transform: uppercase;
+		  border-top-left-radius: 26px;
+		  border-bottom-left-radius: 26px;
+		  border-top-right-radius: 26px;
+		  border-bottom-right-radius: 26px;
+		}
+
+		#cheems {
+		      background-color: white; 
+		      color: black; 
+		      border: 2px solid #000000;
+		}
+
+		#cheems:hover {
+		      background-color: grey;
+		      color: white;
+		}
+
+		#menu {
+  position: fixed;
+  left: 5em;
+  top:0;
+  margin-top: 2.5em;
+  z-index: 2;
+}
+
+  </style>
+
+	<link rel="stylesheet" type="text/css" href="Alien2.css">
+
+</head>
+
+<body>
+
+	<input id="cheems" type="button" onclick="scrollWindow()" value="TOP">
+
+	<img id="menu" src="https://www.seti.org/sites/default/files/setilogo_1.png" width="70px" height="70px">
+
+	<center>
+
+	<div class="A">
+
+		<center>
+		
+			<ul class="nav">
+        <li class="nav"><a id="B" class="nav" href="index.html"><b>Home</b></a></li>
+        <li class="nav"><a id="B" class="nav" href="Alien3.html"><b>About</b></a></li>
+        <li class="nav"><a id="B" class="nav" href="Alien7.html"><b>News</b></a></li>
+        <li class="nav"><a id="B" class="nav" href="Alien5.html"><b>Recruit</b></a></li>
+      </ul>
+
+    </center>
+
+	</div>
+
+	</center>
+
+<br><br><br><br><br><br>
+
+<center>
+
+<h1 style="color: whitesmoke;">The SETI Institute</h1>
+<h3 style="color: whitesmoke;">is a non-profit research organization, located in the Silicon Valley close to the NASA Ames Research Center.<br>
+Our mission is to lead humanity's quest to understand the origins and prevalence of life and intelligence in the universe and share that knowledge with the world.</h1>
+
+</center>
+
+  <br><br><br><br><br><br>
+
+<center>
+
+<table style="background-color: white;">
+
+		<tr>
+
+		<td colspan="1">
+			<p><img width='70px'height='70px' src="https://www.seti.org/sites/default/files/icons/original-seti-institute-log.jpg">
+				The Institute began small, with just one project – NASA’s SETI program – and two employees, founder Tom Pierson (a former grants administrator at San Francisco State University), and astronomer Jill Tarter. Over the years, other research disciplines have been added to the Institute’s portfolio, all unified by their relevance to the search for, and understanding of, life beyond Earth. Today, the Institute has approximately 100 scientists as well as specialists in administration, education, and outreach.
+			</p>
+		</td>
+
+		<td colspan="1">
+
+			<center>
+				
+				<img width='100px'height='160px' src="https://seti.org/sites/default/files/mars-ebook-standing.png">
+
+			<br>
+
+			<h4>Get our exclusive ebook "Mars"</h4>
+
+			<br>
+
+			<a href="https://community.seti.org/ebooks/mars.html"><input id="marco" type="button" value="Download" ></a>
+
+			</center>
+			
+		</td>
+
+		<td colspan="1">
+			<ul>
+    		<li><a>General inquiries</a></li>
+    		<a href="info@seti.org">info@seti.org</a></li>
+    		<li><a>Media inquiries</a></li>
+    		<a href="media@seti.org">media@seti.org</a></li>
+    		<li><a> Human Resources</a></li>
+    		<a href="hr@seti.org">hr@seti.org</a></li>
+    	</ul>
+
+		</td>
+
+	</tr>
+
+	<tr>
+
+		<td colspan="1">
+			<h1 style="font-family:Comic Sans MS; font-size: 50px; color: grey;"> <span style="TEXT-DECORATION: overline;">The Centers</span></h1>
+		</td>
+
+	</tr>
+
+	<tr>
+		<td><img src="https://www.seti.org/sites/default/files/inline-images/csc-400px_0.jpg"></td>
+		<td><img src="https://www.seti.org/sites/default/files/inline-images/education-400px.jpg"></td>
+		<td><img src="https://www.seti.org/sites/default/files/thumbnails/margaret-400px-thumb.jpg"></td>
+	</tr>
+
+	<tr>
+
+		<center>
+
+		<td>
+			<h2><span data-descr="The Carl Sagan Center for Research is home to more than 100 scientists, a tally that is steadily growing. These researchers have expertise in nearly all branches of science relevant to the development of life, where it might exist, and how we can find it." style="color: black;">Carl Sagan Center</span></h2><br><br><br>
+		</td>
+
+		<td>
+			<h2><span data-descr="The fundamental questions being addressed by SETI Institute researchers have great popular appeal. They are therefore excellent “hooks” to interest young people in STEAM topics, subject matter that is at the core of our formal education programs. The Center for Education promotes STEAM education through NASA- and NSF-funded programs aimed at teaching and inspiring children, young adults and educators with an emphasis on space sciences and astrobiology." style="color:black;">Center for Education</span></h2><br><br><br>
+		</td>
+
+		<td>
+			<h2><span data-descr="Science is not just for scientists. We want to share the excitement of our research, but also promote greater science literacy in general. Efforts include more than a hundred or more popular lectures given annually, programs at museums and planetariums, and numerous popular articles in magazine, newspapers, and on the web. Regular outreach offerings include SETI Talks, our monthly lecture series, the weekly Big Picture Science podcast and radio program, SETI Live talks on social media, Journey e-newsletter and Explorer magazine." style="color: black;">Center for Outreach</span></h2><br><br><br>
+		</td>
+
+		</center>
+
+	</tr>
+
+</table>
+
+<br>
+<hr>
+<hr>
+
+<h1 style="font-family:Comic Sans MS; font-size: 50px; color: whitesmoke;"> <span style="TEXT-DECORATION: overline;">Careers at SETI Institute</span></h1>
+
+
+<table style="color:whitesmoke;">
+  <tr>
+    <th>
+
+<h1> Become a PI or Affiliate</h1>
+
+<br>
+
+<h3>Scientists working in the field of astrobiology can request to have their grants funded through the SETI Institute. If you don’t already have a grant, the SETI Institute can help you propose for one.</h3>
+
+<br>
+
+<h1>Apply for a Job</h1>
+
+<br>
+
+<h3>The SETI Institute is an Affirmative Action and Equal Opportunity Employer.</h3>
+
+</th>
+    <th rowspan="2"><img width="800" height="500" src="https://www.seti.org/sites/default/files/styles/original/public/2019-04/95_S_04_91%20Peter%20Backus%20Jill%20Tarter%20observing%20at%20Parkes%20radio%20telescope.jpg"></th>
+  </tr>
+
+</table>
+
+<hr>
+<hr>
+<br>
+
+<table style="background-color: white;">
+
+	<tr>
+		<td colspan="4"> </td>
+	</tr>
+	
+	<tr>
+
+		<td colspan="1">
+			<h1 style="font-family:Comic Sans MS; font-size: 50px; color: grey;"> <span style="TEXT-DECORATION: overline;">The Team</span></h1>
+		</td>
+
+	</tr>
+
+	<tr>
+		<td><img width='300px'height='300px' src="https://www.seti.org/sites/default/files/our-team/bot-400px.jpg"></td>
+		<td><img width='300px'height='300px' src="https://www.seti.org/sites/default/files/our-team/sc-400px.jpg"></td>
+		<td><img width='300px'height='300px' src="https://www.seti.org/sites/default/files/our-team/ss-400px.jpg"></td>
+		<td><img width='300px'height='300px' src="https://www.seti.org/sites/default/files/our-team/sab-400px.jpg"></td>
+	</tr>
+	
+	<tr>
+		<td><a href="https://seti.org/board-of-trustees"><h3 style="color:black; font-family: Comic Sans MS;">Board of Trustees</h3></a></td>
+		<td><a href="https://www.seti.org/science-council"><h3 style="color:black; font-family: Comic Sans MS;">Science Council</h3></a></td>
+		<td><a href="https://www.seti.org/senior-staff"><h3 style="color:black; font-family: Comic Sans MS;">Senior Staff</h3></a></td>
+		<td><a href="https://www.seti.org/science-advisory-board" style="color:black; font-family: Comic Sans MS;"><h3>Science Advisory Board</h3></a></td>
+	</tr>
+
+	<tr>
+		<td><img width='300px'height='300px'src="https://www.seti.org/sites/default/files/our-team/scientists-400px.jpg"></td>
+		<td><img width='300px'height='300px'src="https://www.seti.org/sites/default/files/our-team/affiliates-400px.jpg"></td>
+		<td><img width='300px'height='300px'src="https://www.seti.org/sites/default/files/our-team/coa-400px.jpg"></td>
+		<td><img width='300px'height='300px'src="https://www.seti.org/sites/default/files/our-team/emeritus2-400px.jpg"></td>
+	</tr>
+
+	<tr>
+
+		<td>
+
+			<a href="https://www.seti.org/our-scientists">
+				<h3 style="color:black; font-family: Comic Sans MS;">Scientists, Engineers</h3>
+			</a>
+
+			<br><br><br><br>
+
+		</td>
+
+		<td>
+
+			<a href="https://www.seti.org/affiliates">
+				<h3 style="color:black; font-family: Comic Sans MS;">Affiliates</h3>
+			</a>
+
+			<br><br><br><br>
+
+		</td>
+
+		<td><a href="https://www.seti.org/council-advisors">
+			<h3 style="color:black; font-family: Comic Sans MS;">Council of Advisors</h3>
+		</a>
+
+		<br><br><br><br>
+
+		</td>
+		<td>
+
+		<a href="https://www.seti.org/emeritus-board-2">
+			<h3 style="color:black; font-family: Comic Sans MS;">Emeritus Board</h3>
+		</a>
+
+			<br><br><br><br>
+
+		</td>
+	</tr>
+
+</table>
+
+</center>
+
+<center>
+
+<footer>
+
+<div style="font-family: Comic Sans MS;color: whitesmoke;">
+
+  <h5>This page was last edited on 21 April 2022, at 05:54.</h5>
+  <h5>© copyright 2022 By Ashlyn/Marco.</h5>
+  <h5>
+  	If you have any suggestions or comments, please feel free to contact us:
+  	<center><br>2477516374@qq.com / 2839134101@qq.com</center>
+  </h5>
+
+</div>
+
+</footer>
+
+</center>
+
+<script type="text/javascript">
+
+	function scrollWindow(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+</script>
+
+</body>
+
+</html>
